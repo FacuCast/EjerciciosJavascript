@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .orden li a {
+            font-size: 20px;
+        }
+        
+        .orden li {
+            color: blue;
+            padding-left: 2%;
+        }
+    </style>
+    <h1>Ejercicio N*4</h1>
+    <div>
+        <ul class="orden" style="display: flex;text-decoration: none;list-style: none;">
+            <li><a href="index.html">Actividad NªA</a></li>
+            <li><a href="actB.html">Actividad NªB</a></li>
+            <li><a href="actC.html">Actividad NªC</a></li>
+            <li><a href="actD.html">Actividad NªD</a></li>
+            <li><a href="actE.html">Actividad NªE</a></li>
+
+        </ul>
+    </div>
+    <form action="#" method="post">
+        <h2>Ingrese una Numero.</h2>
+        <input id="Num1" type="text" name="calcular">
+        <h2>Ingrese otro Numero.</h2>
+
+        <input id="Num2" type="text" name="calcular2">
+
+        <input onclick="calculadora();" type="submit" value="Ingresar">
+    </form>
+</body>
+<script>
+    function calculadora() {
+        var numero1 = 0;
+        var numero2 = 0;
+
+        numero1 = document.getElementById("Num1").value;
+        numero2 = document.getElementById("Num2").value;
+
+        alert("Suma: " + (parseInt(numero1) + parseInt(numero2)));
+        alert("Resta: " + (parseInt(numero1) - parseInt(numero2)));
+        alert("Multiplicacion: " + numero1 * numero2);
+        alert("Division: " + numero1 / numero2);
+    }
+</script>
+
+</html>

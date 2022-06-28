@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .orden li a {
+            font-size: 20px;
+        }
+        
+        .orden li {
+            color: blue;
+            padding-left: 2%;
+        }
+    </style>
+    <h1>Ejercicio N*4</h1>
+    <div>
+        <ul class="orden" style="display: flex;text-decoration: none;list-style: none;">
+            <li><a href="index.html">Actividad NªA</a></li>
+            <li><a href="actB.html">Actividad NªB</a></li>
+            <li><a href="actC.html">Actividad NªC</a></li>
+            <li><a href="actD.html">Actividad NªD</a></li>
+            <li><a href="actE.html">Actividad NªE</a></li>
+
+        </ul>
+    </div>
+    <h2>Ingrese una altura.</h2>
+    <input type="text" name="altura" id="altura">
+    <input onclick="subirJuego();" type="submit" value="Ingresar">
+
+</body>
+<script>
+    function subirJuego() {
+        var altura = 0;
+        altura = document.getElementById("altura").value;
+        if (altura >= 1.30) {
+            alert("PODES SUBIR AL JUEGO!")
+        } else {
+            alert("SOS UN POCO BAJO!")
+        }
+    }
+</script>
+
+</html>

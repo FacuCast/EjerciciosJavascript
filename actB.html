@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .orden li a {
+            font-size: 20px;
+        }
+        
+        .orden li {
+            color: blue;
+            padding-left: 2%;
+        }
+    </style>
+    <h1>Ejercicio N*4</h1>
+    <div>
+        <ul class="orden" style="display: flex;text-decoration: none;list-style: none;">
+            <li><a href="index.htnl">Actividad NªA</a></li>
+            <li><a href="actB.html">Actividad NªB</a></li>
+            <li><a href="actC.html">Actividad NªC</a></li>
+            <li><a href="actD.html">Actividad NªD</a></li>
+            <li><a href="actE.html">Actividad NªE</a></li>
+
+        </ul>
+    </div>
+    <form action="#" method="post">
+        <h2>Ingrese CANTIDAD DE ALUMNOS</h2>
+        <input type="text" name="cantAlumnos" id="cantAlum">
+        <h2>Ingrese CANTIDAD DE SILLAS</h2>
+        <input type="text" name="cantSillas" id="CantSill">
+        <input onclick="calcular();" type="submit" value="Ingresar">
+    </form>
+</body>
+<script>
+    function calcular() {
+        var faltantes = 0;
+        var cantiAlum = 0;
+        var CantSill = 0;
+        cantiAlum = document.getElementById("cantAlum").value;
+        CantSill = document.getElementById("CantSill").value;
+
+        if (CantSill === cantiAlum) {
+            alert("TENES LA CANTIDAD JUSTA DE SILLAS Y ALUMNOS");
+        } else if (CantSill < cantiAlum) {
+            faltantes = (cantiAlum - CantSill);
+            alert("TENES MAS ALUMNOS QUE SILLAS. TENES " + faltantes + " ALUMNOS DE MAS!");
+        } else if (CantSill > cantiAlum) {
+            faltantes = (CantSill - cantiAlum);
+            alert("TENES MAS SILLAS QUE ALUMNOS. TENES " + faltantes + " ALUMNOS DE MAS!");
+        }
+        faltantes = 0;
+    }
+</script>
+
+</html>

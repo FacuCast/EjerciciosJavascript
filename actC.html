@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .orden li a {
+            font-size: 20px;
+        }
+        
+        .orden li {
+            color: blue;
+            padding-left: 2%;
+        }
+    </style>
+    <h1>Ejercicio N*4</h1>
+    <div>
+        <ul class="orden" style="display: flex;text-decoration: none;list-style: none;">
+            <li><a href="index.html">Actividad NªA</a></li>
+            <li><a href="actB.html">Actividad NªB</a></li>
+            <li><a href="actC.html">Actividad NªC</a></li>
+            <li><a href="actD.html">Actividad NªD</a></li>
+            <li><a href="actE.html">Actividad NªE</a></li>
+
+        </ul>
+    </div>
+    <form action="#" method="post">
+        <h2>Ingrese el monto total de la compra.</h2>
+        <input type="text" id="compra" name="compra">
+        <select id="formaPago" name="formaPago">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta Credito</option>
+        </select></br>
+        </br>
+        <input onclick="pagos();" type="submit" value="Ingresar">
+    </form>
+</body>
+<script>
+    function pagos() {
+        var medioPago = "";
+        var monto = 0;
+
+        medioPago = document.getElementById("formaPago").value;
+        monto = document.getElementById("compra").value;
+        if (medioPago === "Efectivo") {
+
+            $Resultado = (monto * 0.1);
+            alert("CON EL DESCUENTO QUEDA POR PAGAR: $" + $Resultado + "");
+        } else {
+            alert("NO TENES DESCUENTO, TENES QUE PAGAR: $" + monto + "")
+        }
+    }
+</script>
+
+</html>
